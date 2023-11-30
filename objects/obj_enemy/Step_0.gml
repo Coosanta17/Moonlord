@@ -13,12 +13,14 @@ if(enemyScript[state] != -1)
 	/// @DnDAction : YoYo Games.Common.Function_Call
 	/// @DnDVersion : 1
 	/// @DnDHash : 2A3F8CFF
-	/// @DnDInput : 2
+	/// @DnDInput : 4
 	/// @DnDParent : 395B4168
 	/// @DnDArgument : "function" "enemyScript[state]"
 	/// @DnDArgument : "arg" "x"
 	/// @DnDArgument : "arg_1" "y"
-	enemyScript[state](x, y);
+	/// @DnDArgument : "arg_2" "x_orbit"
+	/// @DnDArgument : "arg_3" "y_orbit"
+	enemyScript[state](x, y, x_orbit, y_orbit);
 }
 
 /// @DnDAction : YoYo Games.Common.Variable

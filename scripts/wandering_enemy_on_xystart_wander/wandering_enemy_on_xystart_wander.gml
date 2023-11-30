@@ -1,14 +1,12 @@
 /// @DnDAction : YoYo Games.Common.Function
 /// @DnDVersion : 1
 /// @DnDHash : 43DC46C3
-/// @DnDComment : @function               brownDogWander(x,y,x_orbit,y_orbit)$(13_10)@param {real} x         The x position of the object$(13_10)@param {real} y         The y position of the object$(13_10)@param {real} x_orbit   The x position to randomly move around$(13_10)@param {real} y_orbit   The y position to randomly move around
-/// @DnDInput : 4
-/// @DnDArgument : "funcName" "brownDogWander"
+/// @DnDComment : @function         brownDogWander(x,y)$(13_10)@param {real} x   The x position of the object$(13_10)@param {real} y   The y position of the object
+/// @DnDInput : 2
+/// @DnDArgument : "funcName" "tmp_brownDogWander"
 /// @DnDArgument : "arg" "_x"
 /// @DnDArgument : "arg_1" "_y"
-/// @DnDArgument : "arg_2" "x_orbit"
-/// @DnDArgument : "arg_3" "y_orbit"
-function brownDogWander(_x, _y, x_orbit, y_orbit) 
+function tmp_brownDogWander(_x, _y) 
 {
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
@@ -39,7 +37,7 @@ function brownDogWander(_x, _y, x_orbit, y_orbit)
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
 	/// @DnDHash : 424F88FB
-	/// @DnDComment : If xyTo is the same as current position (at destination) $(13_10)OR $(13_10)time passed is greater than time it takes to travel max distance (given up)$(13_10)$(13_10)(At destination or given up)
+	/// @DnDComment : At destination or given up
 	/// @DnDParent : 43DC46C3
 	/// @DnDArgument : "expr" "((_x == xTo) && (_y ==yTo)) || (timePassed > enemyWanderDistance/enemySpeed)"
 	if(((_x == xTo) && (_y ==yTo)) || (timePassed > enemyWanderDistance/enemySpeed))
@@ -73,30 +71,10 @@ function brownDogWander(_x, _y, x_orbit, y_orbit)
 		{
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
-			/// @DnDHash : 76493517
-			/// @DnDComment : Wander all over map with no fixed position to stay around
-			/// @DnDInput : 2
-			/// @DnDParent : 588D0B2D
-			/// @DnDArgument : "expr" "_x + (irandom_range(-25,25))"
-			/// @DnDArgument : "expr_1" "_y + (irandom_range(-25,25))"
-			/// @DnDArgument : "var" "x_orbit"
-			/// @DnDArgument : "var_1" "y_orbit"
-			x_orbit = _x + (irandom_range(-25,25));
-			y_orbit = _y + (irandom_range(-25,25));
-		
-			/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
-			/// @DnDVersion : 1
-			/// @DnDHash : 55CFED3C
-			/// @DnDParent : 588D0B2D
-			/// @DnDArgument : "msg" ""x and y orbit set to {0}, {1}", x_orbit, y_orbit"
-			show_debug_message(string("x and y orbit set to {0}, {1}", x_orbit, y_orbit));
-		
-			/// @DnDAction : YoYo Games.Common.Variable
-			/// @DnDVersion : 1
 			/// @DnDHash : 69BAFAB3
 			/// @DnDInput : 5
 			/// @DnDParent : 588D0B2D
-			/// @DnDArgument : "expr_2" "point_direction(_x,_y,x_orbit,y_orbit) + irandom_range(-45,45)"
+			/// @DnDArgument : "expr_2" "point_direction(_x,_y,xstart,ystart) + irandom_range(-45,45)"
 			/// @DnDArgument : "expr_3" "_x + lengthdir_x(enemyWanderDistance, dir)"
 			/// @DnDArgument : "expr_4" "_y + lengthdir_y(enemyWanderDistance, dir)"
 			/// @DnDArgument : "var" "wait"
@@ -106,7 +84,7 @@ function brownDogWander(_x, _y, x_orbit, y_orbit)
 			/// @DnDArgument : "var_4" "yTo"
 			wait = 0;
 			timePassed = 0;
-			dir = point_direction(_x,_y,x_orbit,y_orbit) + irandom_range(-45,45);
+			dir = point_direction(_x,_y,xstart,ystart) + irandom_range(-45,45);
 			xTo = _x + lengthdir_x(enemyWanderDistance, dir);
 			yTo = _y + lengthdir_y(enemyWanderDistance, dir);
 		}
@@ -121,7 +99,7 @@ function brownDogWander(_x, _y, x_orbit, y_orbit)
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
-		/// @DnDHash : 354AAFD2
+		/// @DnDHash : 5AC07F98
 		/// @DnDParent : 2CC8B487
 		/// @DnDArgument : "expr" "1"
 		/// @DnDArgument : "expr_relative" "1"

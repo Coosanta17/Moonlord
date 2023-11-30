@@ -7,11 +7,13 @@ event_inherited();
 /// @DnDVersion : 1
 /// @DnDHash : 15B0E961
 /// @DnDComment : Intrinsic variables
-/// @DnDInput : 9
+/// @DnDInput : 11
 /// @DnDArgument : "expr" "ENEMYSTATE.IDLE"
 /// @DnDArgument : "expr_3" "xstart"
 /// @DnDArgument : "expr_4" "ystart"
 /// @DnDArgument : "expr_7" "120"
+/// @DnDArgument : "expr_9" "xstart"
+/// @DnDArgument : "expr_10" "ystart"
 /// @DnDArgument : "var" "state"
 /// @DnDArgument : "var_1" "hSpeed"
 /// @DnDArgument : "var_2" "vSpeed"
@@ -21,6 +23,8 @@ event_inherited();
 /// @DnDArgument : "var_6" "timePassed"
 /// @DnDArgument : "var_7" "waitDuration"
 /// @DnDArgument : "var_8" "wait"
+/// @DnDArgument : "var_9" "x_orbit"
+/// @DnDArgument : "var_10" "y_orbit"
 state = ENEMYSTATE.IDLE;
 hSpeed = 0;
 vSpeed = 0;
@@ -30,6 +34,8 @@ dir = 0;
 timePassed = 0;
 waitDuration = 120;
 wait = 0;
+x_orbit = xstart;
+y_orbit = ystart;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
