@@ -77,19 +77,20 @@ function brownDogWander(_x, _y, x_orbit, y_orbit)
 			/// @DnDComment : Wander all over map with no fixed position to stay around
 			/// @DnDInput : 2
 			/// @DnDParent : 588D0B2D
-			/// @DnDArgument : "expr" "_x + (irandom_range(-25,25))"
-			/// @DnDArgument : "expr_1" "_y + (irandom_range(-25,25))"
+			/// @DnDArgument : "expr" "_x + (irandom_range(-50,50))"
+			/// @DnDArgument : "expr_1" "_y + (irandom_range(-50,50))"
 			/// @DnDArgument : "var" "x_orbit"
 			/// @DnDArgument : "var_1" "y_orbit"
-			x_orbit = _x + (irandom_range(-25,25));
-			y_orbit = _y + (irandom_range(-25,25));
+			x_orbit = _x + (irandom_range(-50,50));
+			y_orbit = _y + (irandom_range(-50,50));
 		
 			/// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 			/// @DnDVersion : 1
 			/// @DnDHash : 55CFED3C
+			/// @DnDDisabled : 1
 			/// @DnDParent : 588D0B2D
 			/// @DnDArgument : "msg" ""x and y orbit set to {0}, {1}", x_orbit, y_orbit"
-			show_debug_message(string("x and y orbit set to {0}, {1}", x_orbit, y_orbit));
+		
 		
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
