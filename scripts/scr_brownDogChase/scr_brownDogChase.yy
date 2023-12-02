@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "scr_brownDogWander",
+  "name": "scr_brownDogChase",
   "isCompatibility": false,
   "isDnD": true,
   "parent": {

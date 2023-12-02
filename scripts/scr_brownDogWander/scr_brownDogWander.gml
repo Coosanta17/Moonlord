@@ -195,4 +195,52 @@ function brownDogWander(_x, _y, x_orbit, y_orbit)
 			image_xscale = (sign(hSpeed))/2;
 		}
 	}
+
+	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 280363B1
+	/// @DnDComment : Check for aggro
+	/// @DnDParent : 43DC46C3
+	/// @DnDArgument : "expr" "++aggroCheck >= aggroCheckDuration"
+	if(++aggroCheck >= aggroCheckDuration)
+	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 06656CEC
+		/// @DnDParent : 280363B1
+		/// @DnDArgument : "var" "aggroCheck"
+		aggroCheck = 0;
+	
+		/// @DnDAction : YoYo Games.Common.If_Expression
+		/// @DnDVersion : 1
+		/// @DnDHash : 22BFED70
+		/// @DnDParent : 280363B1
+		/// @DnDArgument : "expr" "(instance_exists(obj_dog)) && (point_distance(_x,_y,obj_dog.x,obj_dog.y) <= enemyAggroRadius)"
+		if((instance_exists(obj_dog)) && (point_distance(_x,_y,obj_dog.x,obj_dog.y) <= enemyAggroRadius))
+		{
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 79180762
+			/// @DnDInput : 2
+			/// @DnDParent : 22BFED70
+			/// @DnDArgument : "expr" "ENEMYSTATE.CHASE"
+			/// @DnDArgument : "expr_1" "obj_dog"
+			/// @DnDArgument : "var" "state"
+			/// @DnDArgument : "var_1" "target"
+			state = ENEMYSTATE.CHASE;
+			target = obj_dog;
+		
+			/// @DnDAction : YoYo Games.Common.Variable
+			/// @DnDVersion : 1
+			/// @DnDHash : 529EC3ED
+			/// @DnDInput : 2
+			/// @DnDParent : 22BFED70
+			/// @DnDArgument : "expr" "2"
+			/// @DnDArgument : "expr_1" "1"
+			/// @DnDArgument : "var" "image_speed"
+			/// @DnDArgument : "var_1" "enemySpeed"
+			image_speed = 2;
+			enemySpeed = 1;
+		}
+	}
 }

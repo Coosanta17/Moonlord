@@ -22,6 +22,7 @@
     {"name":"Dog Main","order":17,"path":"folders/Sprites/Dog Main.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
+    {"name":"Brown Dog","order":4,"path":"folders/Scripts/Brown Dog.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_brown_dog_still","order":1,"path":"sprites/spr_brown_dog_still/spr_brown_dog_still.yy",},
@@ -29,7 +30,7 @@
     {"name":"snd_bark_big","order":3,"path":"sounds/snd_bark_big/snd_bark_big.yy",},
     {"name":"spr_city_background1","order":3,"path":"sprites/spr_city_background1/spr_city_background1.yy",},
     {"name":"spr_notice_exclaim","order":15,"path":"sprites/spr_notice_exclaim/spr_notice_exclaim.yy",},
-    {"name":"scr_brownDogWander","order":2,"path":"scripts/scr_brownDogWander/scr_brownDogWander.yy",},
+    {"name":"scr_brownDogChase","order":1,"path":"scripts/scr_brownDogChase/scr_brownDogChase.yy",},
     {"name":"ani_dog_fight_init","order":1,"path":"animcurves/ani_dog_fight_init/ani_dog_fight_init.yy",},
     {"name":"obj_brown_dog_fight","order":7,"path":"objects/obj_brown_dog_fight/obj_brown_dog_fight.yy",},
     {"name":"obj_enemy","order":1,"path":"objects/obj_enemy/obj_enemy.yy",},

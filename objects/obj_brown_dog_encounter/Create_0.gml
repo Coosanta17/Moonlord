@@ -28,6 +28,10 @@ sprMove = spr_brown_dog_walk;
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 0DB4C5F9
+/// @DnDInput : 2
 /// @DnDArgument : "expr" "brownDogWander"
+/// @DnDArgument : "expr_1" "brownDogChase"
 /// @DnDArgument : "var" "enemyScript[ENEMYSTATE.WANDER]"
+/// @DnDArgument : "var_1" "enemyScript[ENEMYSTATE.CHASE]"
 enemyScript[ENEMYSTATE.WANDER] = brownDogWander;
+enemyScript[ENEMYSTATE.CHASE] = brownDogChase;
